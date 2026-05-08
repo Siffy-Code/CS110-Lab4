@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1e1f26;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
+    min-height: 100vh;
+
+    padding: 30px;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+.container {
+    display: flex;
+
+    width: 100%;
+
+    gap: 30px;
+
+    align-items: flex-start;
+}
+
+/* =========================
+   FILTER PANEL (LEFT SIDE)
+========================= */
+.filter-panel {
+    background-color: #f0f0f0;
+    color: black;
+
+    width: 240px;
+    flex-shrink: 0;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    position: sticky;
+    top: 20px;
+}
+
+.filter-panel h2 {
+    margin-bottom: 20px;
+}
+
+.filter-group {
+    margin-bottom: 30px;
+}
+
+.filter-group h3 {
+    margin-bottom: 10px;
+}
+
+.filter-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    cursor: pointer;
+}
+
+/* =========================
+   ARTICLES SECTION
+========================= */
+#articles-container {
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+/* =========================
+   ARTICLE CARD
+========================= */
+.article-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background-color: #d9d9d9;
+    color: black;
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    min-height: 130px;
+}
+
+.article-image {
+    width: 120px;
+    height: 90px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    flex-shrink: 0;
+}
+
+.article-content {
+    flex: 1;
+}
+
+.article-title {
+    font-size: 1rem;
+
+    margin-bottom: 10px;
+}
+
+.article-abstract {
+    font-size: 0.9rem;
+
+    line-height: 1.4;
+}
+
+.article-date {
+    font-size: 0.8rem;
+
+    color: #555;
+
+    align-self: flex-start;
+}
+
+/* =========================
+   STATUS TEXT
+========================= */
+.loading,
+.error {
+    font-size: 1.2rem;
+
+    padding: 20px;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+
+    .container {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .filter-panel {
+        width: 100%;
+
+        position: static;
+    }
+
+    #articles-container {
+        width: 100%;
+    }
+
+    .article-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .article-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .article-date {
+        align-self: flex-end;
+    }
+}

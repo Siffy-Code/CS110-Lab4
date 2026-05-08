@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NYT Popular Articles</title>
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <main class="container">
+
+        <!-- FILTER PANEL -->
+        <aside class="filter-panel">
+
+            <h2>Filter</h2>
+
+            <div class="filter-group">
+                <h3>Sort By:</h3>
+
+                <label>
+                    <input type="radio" name="articleType" value="viewed" checked />
+                    Most Viewed
+                </label>
+
+                <label>
+                    <input type="radio" name="articleType" value="shared" />
+                    Most Shared
+                </label>
+
+                <label>
+                    <input type="radio" name="articleType" value="emailed" />
+                    Most Emailed
+                </label>
+            </div>
+
+            <div class="filter-group">
+                <h3>Time Frame:</h3>
+
+                <label>
+                    <input type="radio" name="timeFrame" value="1" />
+                    Day
+                </label>
+
+                <label>
+                    <input type="radio" name="timeFrame" value="7" checked />
+                    Week
+                </label>
+
+                <label>
+                    <input type="radio" name="timeFrame" value="30" />
+                    Month
+                </label>
+            </div>
+
+        </aside>
+
+        <!-- ARTICLES -->
+        <section id="articles-container">
+
+            <div class="loading">
+                Loading articles...
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
